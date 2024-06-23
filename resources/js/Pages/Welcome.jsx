@@ -12,6 +12,7 @@ import laravelIcon from '/public/images/laravelIcon.svg';
 import reactIcon from '/public/images/reactIcon.svg';
 import seleniumIcon from '/public/images/seleniumIcon.svg';
 import colors from "tailwindcss/colors.js";
+import PrimaryButton from "@/Components/PrimaryButton.jsx";
 
 export default function Welcome({ auth, laravelVersion, phpVersion }) {
     const handleImageError = () => {
@@ -20,7 +21,6 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
         document.getElementById('docs-card-content')?.classList.add('!flex-row');
         document.getElementById('background')?.classList.add('!hidden');
     };
-
     return (
         <>
             <Head title="Austin Parham" />
@@ -160,7 +160,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                 </a>
 
                                 <div
-                                    className="flex items-start gap-4 rounded-lg bg-white p-3 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800">
+                                    className="flex text-white items-start gap-4 rounded-lg bg-transparent p-3 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800">
                                     <svg className="self-center" fill="#6c4ee4" width="64px" height="64px"
                                          viewBox="-5.6 -5.6 67.20 67.20"
                                          xmlns="http://www.w3.org/2000/svg" transform="rotate(0)">
@@ -177,13 +177,18 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                         </svg>
 
                                     <div className="pt-3 sm:pt-5">
-                                        <h2 className="text-xl font-semibold text-black dark:text-white">
-                                            Contact Me
+                                        <h2 className="text-xl font-semibold dark:text-white">
+                                            Links and Contact Info
                                         </h2>
 
-                                        <p className="mt-4 text-sm/relaxed">
-                                            Laravel's robust library of first-party tools and libraries, such as checking these svgs
-                                        </p>
+                                        <h3 className="mt-4 text-md/relaxed">
+                                            Email: austinmparham@gmail.com
+                                        </h3>
+                                        <h3 className="mt-4 text-md/relaxed">
+                                            Github: https://github.com/austinmparham
+                                        </h3>
+                                        <h3>Resume: <PrimaryButton><a href={'resume'}>Download Resume</a></PrimaryButton></h3>
+
                                     </div>
 
                                     {/*<svg className="self-center" fill="#6c4ee4" version="1.1" id="Capa_1"*/}
@@ -214,3 +219,4 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
         </>
     );
 }
+
