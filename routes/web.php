@@ -26,9 +26,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-//Route::get('/chirps', function () {
-//    return Inertia::render('Chirp/Index');
-//})->middleware(['auth', 'verified'])->name('chirps');
 Route::resource('chirps', ChirpController::class)
     ->only(['index', 'store','update','destroy'])
     ->middleware(['auth', 'verified']);

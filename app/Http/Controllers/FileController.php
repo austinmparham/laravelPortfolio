@@ -4,9 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use Inertia\Response;
-use Inertia\Inertia;
-use Inertia\ResponseFactory;
 
 class FileController extends Controller{
 
