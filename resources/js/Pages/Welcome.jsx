@@ -11,7 +11,6 @@ import awsIcon from '/public/images/awsIcon.svg';
 import laravelIcon from '/public/images/laravelIcon.svg';
 import reactIcon from '/public/images/reactIcon.svg';
 import seleniumIcon from '/public/images/seleniumIcon.svg';
-import colors from "tailwindcss/colors.js";
 import PrimaryButton from "@/Components/PrimaryButton.jsx";
 
 export default function Welcome({ auth, laravelVersion, phpVersion }) {
@@ -35,8 +34,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
 
                         <main className="mt-6">
                             <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
-                                <a
-                                    href="https://laravel.com/docs"
+                                <div
                                     id="docs-card"
                                     className="flex flex-col items-start gap-4 overflow-hidden rounded-lg bg-transparent p-3
                                     shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05]
@@ -75,13 +73,9 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                             </div>
                                         </div>
                                     </div>
-                                </a>
+                                </div>
 
-                                <a
-                                    href="https://laracasts.com"
-                                    className="flex items-start gap-4 rounded-lg bg-#6c4ee4 p-3 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                                >
-                                    <div className="grid grid-cols-1">
+                                    <div className="grid grid-cols-1 flex text-white items-start gap-4 rounded-lg bg-transparent p-3 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800">
                                         <div className="pt-3 sm:pt-5 text-white">
                                             <h2 className="text-xl font-semibold dark:text-white text-center">Experience
                                                 &
@@ -89,62 +83,48 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                         </div>
                                         <div className="grid grid-cols-5 gap-4">
                                             <div>
-                                                <embed src={javaimg} type="image/svg+xml" width="100"
-                                                       height="100" className="w-24 h-24"/>
+                                                <embed src={javaimg} type="image/svg+xml" className="w-auto h-auto"/>
                                             </div>
                                             <div>
-                                                <embed src={pythonIcon} type="image/svg+xml" width="100"
-                                                       height="100" className="w-24 h-24"/>
+                                                <embed src={pythonIcon} type="image/svg+xml" className="w-auto h-auto"/>
                                             </div>
                                             <div>
-                                                <embed src={htmlIcon} type="image/svg+xml" width="100"
-                                                       height="100" className="w-24 h-24"/>
+                                                <embed src={htmlIcon} type="image/svg+xml" className="w-auto h-auto"/>
                                             </div>
                                             <div>
-                                                <embed src={cucumberIcon} type="image/svg+xml" width="100"
-                                                       height="100" className="w-24 h-24"/>
+                                                <embed src={cucumberIcon} type="image/svg+xml" className="w-auto h-auto"/>
                                             </div>
                                             <div>
-                                                <embed src={jenkinsIcon} type="image/svg+xml" width="100"
-                                                       height="100" className="w-24 h-24"/>
+                                                <embed src={jenkinsIcon} type="image/svg+xml" className="w-auto h-auto"/>
                                             </div>
                                             <div>
-                                                <embed src={postmanIcon} type="image/svg+xml" width="100"
-                                                       height="100" className="w-24 h-24"/>
+                                                <embed src={postmanIcon} type="image/svg+xml" className="w-auto h-auto"/>
                                             </div>
                                             <div>
-                                                <embed src={awsIcon} type="image/svg+xml" width="100"
-                                                       height="100" className="w-24 h-24"/>
+                                                <embed src={awsIcon} type="image/svg+xml" className="w-auto h-auto"/>
                                             </div>
                                             <div>
-                                                <embed src={laravelIcon} type="image/svg+xml" width="100"
-                                                       height="100" className="w-24 h-24"/>
+                                                <embed src={laravelIcon} type="image/svg+xml" className="w-auto h-auto"/>
                                             </div>
                                             <div>
-                                                <embed src={reactIcon} type="image/svg+xml" width="100"
-                                                       height="100" className="w-24 h-24"/>
+                                                <embed src={reactIcon} type="image/svg+xml" className="w-auto h-auto"/>
                                             </div>
                                             <div>
-                                                <embed src={seleniumIcon} type="image/svg+xml" width="100"
-                                                       height="100" className="w-24 h-24"/>
+                                                <embed src={seleniumIcon} type="image/svg+xml" className="w-auto h-auto"/>
                                             </div>
                                         </div>
                                     </div>
-
-
-                                </a>
 
                                 <div
                                     className="flex text-white items-start gap-4 rounded-lg bg-transparent p-3 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800">
                                     <svg className="self-center" fill="#6c4ee4" width="64px" height="64px"
                                          viewBox="-5.6 -5.6 67.20 67.20"
                                          xmlns="http://www.w3.org/2000/svg" transform="rotate(0)">
-                                            <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                            <g id="SVGRepo_bgCarrier">
                                                 <rect x="-5.6" y="-5.6" width="67.20" height="67.20" rx="33.6"
                                                       fill="#9ac8f9" strokeWidth="0"></rect>
                                             </g>
-                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-                                               stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_tracerCarrier"></g>
                                             <g id="SVGRepo_iconCarrier">
                                                 <path
                                                     d="M 9.4843 48.1914 L 47.2184 48.1914 C 51.4376 48.1914 53.8751 45.7539 53.8751 40.9258 L 53.8751 15.0508 C 53.8751 10.2461 51.4141 7.8086 46.5157 7.8086 L 8.7812 7.8086 C 4.5858 7.8086 2.1249 10.2227 2.1249 15.0508 L 2.1249 40.9258 C 2.1249 45.7773 4.6093 48.1914 9.4843 48.1914 Z M 25.2109 29.1836 L 7.5155 11.7227 C 8.0312 11.5117 8.6405 11.3945 9.3671 11.3945 L 46.6564 11.3945 C 47.3826 11.3945 48.0157 11.5117 48.5548 11.7696 L 30.8827 29.1836 C 29.8749 30.1914 28.9843 30.6367 28.0468 30.6367 C 27.1093 30.6367 26.2187 30.1914 25.2109 29.1836 Z M 5.7109 40.9258 L 5.7109 15.0508 C 5.7109 14.8867 5.7109 14.9570 5.7109 14.8164 L 19.1874 28.0352 L 5.7343 41.3242 C 5.7109 41.2070 5.7109 41.0664 5.7109 40.9258 Z M 50.2890 15.0742 L 50.2890 40.9492 C 50.2890 41.0430 50.2890 41.1602 50.2890 41.2539 L 36.9062 28.0352 L 50.2890 14.8867 C 50.2890 15.0742 50.2890 15.0742 50.2890 15.0742 Z M 9.3671 44.6055 C 8.6874 44.6055 8.1249 44.5117 7.6327 44.3008 L 21.6484 30.4492 L 23.1718 31.9492 C 24.8124 33.5664 26.3827 34.2461 28.0468 34.2461 C 29.6874 34.2461 31.2812 33.5664 32.9218 31.9492 L 34.4452 30.4492 L 48.4376 44.2773 C 47.9452 44.5117 47.3360 44.6055 46.6564 44.6055 Z"></path>
