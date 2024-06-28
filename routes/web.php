@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ChirpController;
+use App\Http\Controllers\FileController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -25,11 +26,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-//Route::get('/chirps', function () {
-//    return Inertia::render('Chirp/Index');
-//})->middleware(['auth', 'verified'])->name('chirps');
 Route::resource('chirps', ChirpController::class)
     ->only(['index', 'store','update','destroy'])
     ->middleware(['auth', 'verified']);
+
+Route::get('resume', [FileController::class, 'downloadResume'])->name('file.downloadResume');
 
 require __DIR__ . '/auth.php';
