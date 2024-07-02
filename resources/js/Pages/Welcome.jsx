@@ -23,7 +23,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
     return (
         <>
             <Head title="Austin Parham" />
-            <div className="text-black/50 dark:bg-black dark:text-white/50 bg-cover bg-center h-128" style={{backgroundImage: 'url("/images/background.jpg")'}}>
+            <div className="text-black/50 bg-cover bg-center h-128" style={{backgroundImage: 'url("/images/background.jpg")'}}>
                 <div className="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
                     <div className="relative w-full max-w-2xl px-6 lg:max-w-7xl">
                         <header className="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
@@ -39,21 +39,15 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                     className="flex flex-col items-start gap-4 overflow-hidden rounded-lg bg-transparent p-3
                                     shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05]
                                     transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none
-                                    focus-visible:ring-[#FF2D20] md:row-span-3 lg:p-10 lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800
-                                    dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
+                                    focus-visible:ring-[#FF2D20] md:row-span-3 lg:p-10 lg:pb-10"
                                 >
                                     <div
                                         id="screenshot-container"
                                         className="relative flex w-full flex-1 items-stretch"
                                     >
                                         <img src={image} className="rounded self-center" height="50%" width="70%"></img>
-                                        <img
-                                            src="https://laravel.com/assets/img/welcome/docs-dark.svg"
-                                            alt="Laravel documentation screenshot"
-                                            className="hidden aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.25)] dark:block"
-                                        />
                                         <div
-                                            className="absolute -bottom-16 -left-16 h-40 w-[calc(100%+8rem)] dark:via-zinc-900 dark:to-zinc-900"></div>
+                                            className="absolute -bottom-16 -left-16 h-40 w-[calc(100%+8rem)]"></div>
                                     </div>
 
                                     <div className="relative flex items-center gap-6 lg:items-end text-white">
@@ -61,7 +55,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
 
 
                                             <div className="pt-3 sm:pt-5 lg:pt-0">
-                                                <h2 className="text-xl font-semibold dark:text-white">
+                                                <h2 className="text-xl font-semibold">
                                                     I'm Austin Parham
                                                 </h2>
 
@@ -75,9 +69,9 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                     </div>
                                 </div>
 
-                                    <div className="grid grid-cols-1 flex text-white items-start gap-4 rounded-lg bg-transparent p-3 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800">
+                                    <div className="grid grid-cols-1 flex text-white items-start gap-4 rounded-lg bg-transparent p-3 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] lg:pb-10">
                                         <div className="pt-3 sm:pt-5 text-white">
-                                            <h2 className="text-xl font-semibold dark:text-white text-center">Experience
+                                            <h2 className="text-xl font-semibold text-center">Experience
                                                 &
                                                 Skills</h2>
                                         </div>
@@ -116,7 +110,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                     </div>
 
                                 <div
-                                    className="flex text-white items-start gap-4 rounded-lg bg-transparent p-3 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800">
+                                    className="flex text-white items-start gap-4 rounded-lg bg-transparent p-3 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] lg:pb-10">
                                     <svg className="self-center" fill="#6c4ee4" width="64px" height="64px"
                                          viewBox="-5.6 -5.6 67.20 67.20"
                                          xmlns="http://www.w3.org/2000/svg" transform="rotate(0)">
@@ -132,7 +126,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                         </svg>
 
                                     <div className="pt-3 sm:pt-5">
-                                        <h2 className="text-xl font-semibold dark:text-white">
+                                        <h2 className="text-xl font-semibold">
                                             Links and Contact Info
                                         </h2>
 
@@ -154,7 +148,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                             </div>
                         </main>
 
-                        <footer className="py-16 text-center text-sm text-white dark:text-white/70">
+                        <footer className="py-16 text-center text-sm text-white">
                             Laravel v{laravelVersion} (PHP v{phpVersion})
                         </footer>
                     </div>
