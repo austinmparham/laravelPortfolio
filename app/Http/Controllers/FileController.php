@@ -9,7 +9,7 @@ class FileController extends Controller{
 
     public function downloadResume(Request $request)
     {
-        $path = Storage::disk('public')->path('files/AustinParhamResume.pdf');
+        $path = Storage::disk('public')->path('AustinParhamResume.pdf');
         $fileName = 'AustinParhamResume.pdf';
         return response()->download($path,$fileName);
     }
